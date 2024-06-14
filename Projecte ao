@@ -1,0 +1,48 @@
+import mastermind
+import ex2
+import ex3
+import ex4
+import ex5
+import ex6
+
+def menu():
+    opcio=0
+    while opcio<1 or opcio>8:
+        print('''
+            \n
+            Menu principal
+            1.Llistes i Numeros aleatoris
+            2.Fitxers
+            3.Joc
+            4.Aplicacio amb objectes,classe,herencia,polimorfisme,etc
+            5.Aplicacio amb llibreria
+            6.Aplicacio per muntar servei web
+            7.Exit
+            ''')
+        opcio= int(input("Introdueixi una opcio: "))
+        if opcio<1 or opcio>8:
+            print("Opcio no validan torni a elegir una opcio \n")
+        else:
+            return opcio
+
+
+
+#Pprincipal
+opcio=0
+while opcio!=7:
+    opcio = menu()
+    match opcio:
+        case 1:
+            mastermind.pex1()
+        case 2:
+            ex2.pex2()
+        case 3:
+            ex3.pex3()
+        case 4:
+            ex4.pex4()
+        case 5:
+            ex5.pex5()
+        case 6:
+            ex6.pex6()
+        case 7:
+            print("Acabes de tancar el programa, Gracies")
